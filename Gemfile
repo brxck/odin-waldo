@@ -54,6 +54,7 @@ group :development do
   gem 'guard'
   # Live reload
   gem 'guard-livereload'
+  gem 'rubocop'
 end
 
 group :test do
