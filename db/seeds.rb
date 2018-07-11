@@ -7,10 +7,8 @@ Dir.foreach(".") do |item|
 
   data = YAML.load(File.read(item))
 
-  puts data
-
   picture = Picture.create(
-    name: item,
+    name: item.chomp(".yml"),
     title: data["title"],
     author: data["author"],
     website: data["website"],
