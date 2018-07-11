@@ -1,9 +1,5 @@
-p#notice = notice
+p = @picture.name
+p = @picture.author
+p = @picture.website
 
-p
-  strong Name:
-  = @picture.name
-
-=> link_to 'Edit', edit_picture_path(@picture)
-'|
-=< link_to 'Back', pictures_path
+= image_tag "pictures/#{@picture.name}"
