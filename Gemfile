@@ -11,6 +11,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Reset browser css with normalize
+gem 'normalize-rails'
 # Use slim for templating
 gem 'slim-rails'
 # Use Uglifier as compressor for JavaScript assets
