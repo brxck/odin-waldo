@@ -14,7 +14,7 @@ class PicturesController < ApplicationController
 
   def first
     @picture = Picture.first
-    render :show
+    redirect_to @picture
   end
 
   private
