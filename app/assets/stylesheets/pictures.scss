@@ -1,3 +1,18 @@
-// Place all the styles related to the Pictures controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.ripple {
+  transition-property: all;
+  transition-duration: 0.5s;
+
+  background-color: hsla(255, 255, 255, 0.4);
+  border-radius: 50%;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+}
+
+.ripple-full {
+  transform: scale(48);
+}
+
+.ripple-fade {
+  background-color: hsla(0, 0, 0, 0);
+}
