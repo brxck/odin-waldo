@@ -1,7 +1,8 @@
 #container
   = image_tag "pictures/#{@picture.name}"
 
-
+p#id style="display: none;"
+  = @picture.id
 p = @picture.name
 p = @picture.author
 p = @picture.website
