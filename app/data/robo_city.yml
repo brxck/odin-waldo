@@ -3,7 +3,15 @@ author: Josan Gonzales
 website: http://fav.me/daipdfi
 
 people: 
+  -
+    name: Waldo
+    upper: [1515, 1630]
+    lower: [1555, 1690]
   - 
     name: Mario
-    upper: [1702, 686]
-    lower: [1741, 718]
+    upper: [1700, 680]
+    lower: [1740, 730]
+  -
+    name: Sniper
+    upper: [2920, 110]
+    lower: [2995, 194]

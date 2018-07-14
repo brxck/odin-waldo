@@ -4,6 +4,9 @@ window.onload = () => {
 }
 
 const userClick = e => {
+  if (document.body.classList.contains("dragging")) {
+    return
+  }
   console.log("click at " + e.pageX.toString() + ", " + e.pageY.toString())
   animateClick(e.pageX, e.pageY)
   searchPerson(e.pageX, e.pageY)
