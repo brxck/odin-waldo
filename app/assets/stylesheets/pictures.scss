@@ -23,5 +23,12 @@
 
 .label {
   position: absolute;
-  background-color: white;
+  border: solid 1px hsla(255, 255, 255, 0.5);
+  color: hsla(0, 0, 0, 0);
+
+  &:hover {
+    border-style: none;
+    background-color: hsla(0, 0, 0, 0.5);
+    color: white;
+  }
 }

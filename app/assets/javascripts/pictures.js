@@ -21,7 +21,7 @@ const animateClick = (x, y) => {
 
   setTimeout(() => ripple.classList.add("ripple-full"), 50)
   setTimeout(() => ripple.classList.add("ripple-fade"), 550)
-  setTimeout(() => ripple.remove(), 550)
+  setTimeout(() => ripple.remove(), 1050)
 }
 
 const logPerson = response => {
@@ -35,10 +35,12 @@ const logPerson = response => {
 
   label.className = "label"
   label.textContent = response.person.name
-  label.style.left = response.person.x + "px"
-  label.style.top = response.person.y + "px"
+  label.style.left = response.person.x0 + "px"
+  label.style.top = response.person.y0 + "px"
+  label.style.width = response.person.x1 - response.person.x0 + "px"
+  label.style.height = response.person.y1 - response.person.y0 + "px"
 
-  container.append(label)
+  setTimeout(() => container.append(label), 1050)
 }
 
 const searchPerson = (x, y) => {

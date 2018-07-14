@@ -13,8 +13,10 @@ class PeopleController < ApplicationController
     @response = {
       found: found,
       person: {
-        x: @person.x0,
-        y: @person.y0,
+        x0: @person.x0,
+        y0: @person.y0,
+        x1: @person.x1,
+        y1: @person.y1,
         name: @person.name
       },
       remaining: remaining
