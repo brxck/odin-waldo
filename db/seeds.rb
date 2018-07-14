@@ -20,7 +20,8 @@ Dir.foreach(".") do |item|
       x0: person["upper"][0],
       y0: person["upper"][1],
       x1: person["lower"][0],
-      y1: person["lower"][1]
+      y1: person["lower"][1],
+      found: false
     )
   end
 end

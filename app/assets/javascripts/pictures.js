@@ -24,15 +24,19 @@ const animateClick = (x, y) => {
   setTimeout(() => ripple.remove(), 550)
 }
 
-const logPerson = person => {
-  console.log("found " + person.name)
+const logPerson = response => {
+  console.log(response)
+  if (response.found === false) {
+    return
+  }
+
   const container = document.getElementById("container")
   const label = document.createElement("div")
 
   label.className = "label"
-  label.textContent = person.name
-  label.style.left = person.x0 + "px"
-  label.style.top = person.y0 + "px"
+  label.textContent = response.person.name
+  label.style.left = response.person.x + "px"
+  label.style.top = response.person.y + "px"
 
   container.append(label)
 }
@@ -50,6 +54,6 @@ const searchPerson = (x, y) => {
     body: JSON.stringify({ person: { x: x, y: y } })
   })
     .then(response => response.json())
-    .then(json => logPerson(json[0]))
+    .then(json => logPerson(json))
     .catch(error => console.error(error))
 }
