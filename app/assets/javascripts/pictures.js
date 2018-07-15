@@ -51,8 +51,11 @@ const logPerson = response => {
   label.style.height = response.person.y1 - response.person.y0 + "px"
   setTimeout(() => container.append(label), 1050)
 
+  const list = document.getElementById("names")
   const listEntry = document.getElementById(response.person.id)
+  list.removeChild(listEntry)
   listEntry.classList.add("found")
+  list.appendChild(listEntry)
 }
 
 const searchPerson = (x, y) => {
