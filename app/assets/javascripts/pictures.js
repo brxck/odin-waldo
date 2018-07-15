@@ -1,8 +1,18 @@
+let zoomLevel = 1
+
 window.onload = () => {
   const container = document.getElementById("container")
   container.addEventListener("click", imageClick)
+
   const modal = document.getElementById("modal")
   modal.addEventListener("click", modalClick)
+
+  const zoomIn = document.getElementById("in")
+  zoomIn.addEventListener("click", () => zoom(0.1))
+  const zoomOut = document.getElementById("out")
+  zoomOut.addEventListener("click", () => zoom(-0.1))
+  const reset = document.getElementById("reset")
+  reset.addEventListener("click", () => zoom(0))
 }
 
 const imageClick = e => {
@@ -10,8 +20,10 @@ const imageClick = e => {
     return
   }
   console.log("click at " + e.pageX.toString() + ", " + e.pageY.toString())
-  animateClick(e.pageX, e.pageY)
-  searchPerson(e.pageX, e.pageY)
+  const x = e.pageX / zoomLevel
+  const y = e.pageY / zoomLevel
+  animateClick(x, y)
+  searchPerson(x, y)
 }
 
 const modalClick = e => {
@@ -73,4 +85,14 @@ const searchPerson = (x, y) => {
     .then(response => response.json())
     .then(json => logPerson(json))
     .catch(error => console.error(error))
+}
+
+const zoom = adjustment => {
+  const container = document.getElementById("container")
+  if (adjustment === 0) {
+    zoomLevel = 1
+  } else {
+    zoomLevel += adjustment
+  }
+  container.style.transform = `scale(${zoomLevel})`
 }
