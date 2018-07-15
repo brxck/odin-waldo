@@ -1,15 +1,22 @@
 window.onload = () => {
   const container = document.getElementById("container")
-  container.addEventListener("click", userClick)
+  container.addEventListener("click", imageClick)
+  const modal = document.getElementById("modal")
+  modal.addEventListener("click", modalClick)
 }
 
-const userClick = e => {
+const imageClick = e => {
   if (document.body.classList.contains("dragging")) {
     return
   }
   console.log("click at " + e.pageX.toString() + ", " + e.pageY.toString())
   animateClick(e.pageX, e.pageY)
   searchPerson(e.pageX, e.pageY)
+}
+
+const modalClick = e => {
+  const modal = document.getElementById("modal")
+  modal.style.display = "none"
 }
 
 const animateClick = (x, y) => {
@@ -42,8 +49,10 @@ const logPerson = response => {
   label.style.top = response.person.y0 + "px"
   label.style.width = response.person.x1 - response.person.x0 + "px"
   label.style.height = response.person.y1 - response.person.y0 + "px"
-
   setTimeout(() => container.append(label), 1050)
+
+  const listEntry = document.getElementById(response.person.id)
+  listEntry.classList.add("found")
 }
 
 const searchPerson = (x, y) => {

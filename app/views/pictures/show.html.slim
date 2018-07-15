@@ -3,6 +3,21 @@
 
 p#id style="display: none;"
   = @picture.id
-p = @picture.name
-p = @picture.author
-p = @picture.website
+
+#sidebar
+  #time
+    p 0:00
+  #controls
+    button#in +
+    button#out -
+    button#reset reset
+  #names
+    - @picture.people.each do |person|
+      p id=person.id = person.name
+
+#modal
+  .box
+    p: a(href=@picture.website) = @picture.title
+    p: a(href=@picture.website) = "by " + @picture.author
+    p Drag to scroll, click to guess.
+    p Click anywhere to start.

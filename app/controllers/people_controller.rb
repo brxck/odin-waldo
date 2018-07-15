@@ -17,7 +17,8 @@ class PeopleController < ApplicationController
                       y0: @person.y0,
                       x1: @person.x1,
                       y1: @person.y1,
-                      name: @person.name
+                      name: @person.name,
+                      id: @person.id
                     },
                     remaining: picture.people.where(found: false).map(&:name)
                   }
