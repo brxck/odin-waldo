@@ -4,13 +4,14 @@
 p#id style="display: none;"
   = @picture.id
 
-#sidebar
-  #time
-    p 0:00
-  #controls
+button#toggle ☰
+
+#controls
+  span
+  span
     button#in +
     button#out -
-    button#reset reset
+    button#reset ⟲
   ul#names
     - @picture.people.each do |person|
       li id=person.id = person.name

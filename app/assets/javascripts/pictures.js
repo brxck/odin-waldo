@@ -7,6 +7,9 @@ window.onload = () => {
   const modal = document.getElementById("modal")
   modal.addEventListener("click", modalClick)
 
+  const toggleButton = document.getElementById("toggle")
+  toggleButton.addEventListener("click", toggleControls)
+
   const zoomIn = document.getElementById("in")
   zoomIn.addEventListener("click", () => zoom(0.1))
   const zoomOut = document.getElementById("out")
@@ -95,4 +98,13 @@ const zoom = adjustment => {
     zoomLevel += adjustment
   }
   container.style.transform = `scale(${zoomLevel})`
+}
+
+const toggleControls = () => {
+  const controls = document.getElementById("controls")
+  if (controls.style.display === "flex") {
+    controls.style.display = "none"
+  } else {
+    controls.style.display = "flex"
+  }
 }
