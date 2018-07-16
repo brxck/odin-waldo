@@ -94,7 +94,7 @@ const zoom = adjustment => {
   const container = document.getElementById("container")
   if (adjustment === 0) {
     zoomLevel = 1
-  } else {
+  } else if (zoomLevel !== 0.5 || zoomLevel !== 2) {
     zoomLevel += adjustment
   }
   container.style.transform = `scale(${zoomLevel})`
