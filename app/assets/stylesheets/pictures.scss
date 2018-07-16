@@ -13,6 +13,14 @@ button {
   color: lightgray;
 }
 
+a {
+  color: whitesmoke;
+}
+
+h3 {
+  margin-top: -0.5em;
+}
+
 #container {
   overflow: none;
   transform-origin: top left;
@@ -60,7 +68,8 @@ button {
 }
 
 .box {
-  background-color: whitesmoke;
+  background-color: black;
+  color: whitesmoke;
   border-radius: 5px;
   max-width: 500px;
   margin: 15% auto;
