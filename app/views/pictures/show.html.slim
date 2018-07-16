@@ -18,7 +18,6 @@ button#toggle ☰
 
 #modal
   .box
-    p: a(href=@picture.website) = @picture.title
-    p: a(href=@picture.website) = "by " + @picture.author
-    p Drag to scroll, click to guess.
-    p Click anywhere to start.
+    h2: a(href=@picture.website) = @picture.title
+    h3: a(href=@picture.website) = "by " + @picture.author
+    p Drag to scroll, click to guess. Click anywhere to start.

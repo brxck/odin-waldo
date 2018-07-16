@@ -16,6 +16,7 @@ window.onload = () => {
   zoomOut.addEventListener("click", () => zoom(-0.1))
   const reset = document.getElementById("reset")
   reset.addEventListener("click", () => zoom(0))
+  window.addEventListener("wheel", e => zoom(Math.min(0.1, e.deltaY / 10)))
 }
 
 const imageClick = e => {
@@ -91,11 +92,13 @@ const searchPerson = (x, y) => {
 }
 
 const zoom = adjustment => {
+  console.log("zoom")
   const container = document.getElementById("container")
   if (adjustment === 0) {
     zoomLevel = 1
-  } else if (zoomLevel !== 0.5 || zoomLevel !== 2) {
+  } else {
     zoomLevel += adjustment
+    zoomLevel = Math.max(0.5, Math.min(1.5, zoomLevel))
   }
   container.style.transform = `scale(${zoomLevel})`
 }
