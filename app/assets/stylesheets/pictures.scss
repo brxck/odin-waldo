@@ -24,6 +24,8 @@ h3 {
 #container {
   overflow: none;
   transform-origin: top left;
+  transition-property: all;
+  transition-duration: 0.2s;
 }
 
 .ripple {

@@ -16,7 +16,7 @@ window.onload = () => {
   zoomOut.addEventListener("click", () => zoom(-0.1))
   const reset = document.getElementById("reset")
   reset.addEventListener("click", () => zoom(0))
-  window.addEventListener("wheel", e => zoom(Math.min(0.1, e.deltaY / 10)))
+  window.addEventListener("wheel", e => zoom(Math.min(0.1, e.deltaY / 100)))
 }
 
 const imageClick = e => {
