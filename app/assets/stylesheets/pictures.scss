@@ -93,6 +93,9 @@ h3 {
   justify-content: space-around;
   padding: 0 10px;
 
+  transition-property: top;
+  transition-duration: 0.2s;
+
   ul,
   li {
     display: inline-block;

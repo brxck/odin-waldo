@@ -105,9 +105,9 @@ const zoom = adjustment => {
 
 const toggleControls = () => {
   const controls = document.getElementById("controls")
-  if (controls.style.display === "flex") {
-    controls.style.display = "none"
+  if (controls.style.top === "0px") {
+    controls.style.top = "-48px"
   } else {
-    controls.style.display = "flex"
+    controls.style.top = "0px"
   }
 }
