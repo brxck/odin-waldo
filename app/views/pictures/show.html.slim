@@ -1,20 +1,19 @@
 #container
   = image_tag "pictures/#{@picture.name}"
 
-p#id style="display: none;"
+#id style="display: none;"
   = @picture.id
 
 button#toggle ☰
 
 #controls
-  span
-  span
+  div#zoom
     button#in +
     button#out -
     button#reset ⟲
-  ul#names
+  div#names
     - @picture.people.each do |person|
-      li id=person.id = person.name
+      span id=person.id = person.name
 
 #modal
   .box

@@ -14,4 +14,24 @@ people:
   -
     name: Sniper
     upper: [2920, 110]
-    lower: [2995, 194]
+    lower: [2995, 195]
+  -
+    name: Solid Snake
+    upper: [2045, 1320]
+    lower: [2140, 1445]
+  -
+    name: TMNT
+    upper: [1565, 1860]
+    lower: [1655, 1940]
+  -
+    name: Deadpool
+    upper: [870, 60]
+    lower: [810, 20]
+  -
+    name: Batman
+    upper: [2025, 615]
+    lower: [2115, 765]
+  -
+    name: The Box
+    upper: [140, 120]
+    lower: [175, 150]
