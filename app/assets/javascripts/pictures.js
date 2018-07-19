@@ -60,11 +60,14 @@ const logPerson = response => {
   const label = document.createElement("div")
 
   label.className = "label"
-  label.textContent = response.person.name
   label.style.left = response.person.x0 + "px"
   label.style.top = response.person.y0 + "px"
   label.style.width = response.person.x1 - response.person.x0 + "px"
   label.style.height = response.person.y1 - response.person.y0 + "px"
+
+  const text = document.createElement("p")
+  text.textContent = response.person.name
+  label.append(text)
   setTimeout(() => container.append(label), 1050)
 
   const list = document.getElementById("names")

@@ -57,6 +57,11 @@ h3 {
     background-color: hsla(0, 0, 0, 0.5);
     color: white;
   }
+
+  > p {
+    text-align: center;
+    margin-top: 25%;
+  }
 }
 
 #modal {
