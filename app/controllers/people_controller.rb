@@ -20,7 +20,7 @@ class PeopleController < ApplicationController
                       name: @person.name,
                       id: @person.id
                     },
-                    remaining: picture.people.where(found: false).map(&:name)
+                    people: picture.people
                   }
                 else
                   { found: false }
