@@ -102,6 +102,13 @@ h3 {
     display: inline-block;
     margin: 0 5px;
   }
+
+  &.hidden {
+    top: -48px;
+    #names {
+      top: -48px;
+    }
+  }
 }
 
 #zoom {
