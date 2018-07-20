@@ -4,7 +4,7 @@ window.onload = () => {
   const container = document.getElementById("container")
   container.addEventListener("click", imageClick)
 
-  const modal = document.getElementById("modal")
+  const modal = document.getElementById("intro")
   modal.addEventListener("click", modalClick)
 
   const toggleButton = document.getElementById("toggle")
@@ -31,7 +31,7 @@ const imageClick = e => {
 }
 
 const modalClick = e => {
-  const modal = document.getElementById("modal")
+  const modal = document.getElementById("intro")
   modal.style.display = "none"
 }
 
@@ -56,6 +56,8 @@ const logPerson = response => {
     return
   }
 
+  // existing label prevents image clicks and therefore finding people twice
+
   const container = document.getElementById("container")
   const label = document.createElement("div")
 
@@ -76,6 +78,7 @@ const logPerson = response => {
   const listEntry = document.getElementById(response.person.id)
   list.removeChild(listEntry)
   listEntry.classList.add("found")
+  listEntry.classList.remove("unfound")
   list.appendChild(listEntry)
 }
 
@@ -92,8 +95,17 @@ const searchPerson = (x, y) => {
     body: JSON.stringify({ person: { x: x, y: y } })
   })
     .then(response => response.json())
-    .then(json => logPerson(json))
+    .then(json => {
+      logPerson(json)
+      victoryCheck(json)
+    })
     .catch(error => console.error(error))
+}
+
+const victoryCheck = () => {
+  if (document.getElementsByClassName("unfound").length === 0) {
+    document.getElementById("victory").style.display = "initial"
+  }
 }
 
 const zoom = adjustment => {

@@ -13,10 +13,21 @@ button#toggle ☰
     button#reset ⟲
   div#names
     - @picture.people.each do |person|
-      span id=person.id = person.name
+      span.unfound id=person.id = person.name
 
-#modal
+#intro.modal
   .box
     h2: a(href=@picture.website) = @picture.title
     h3: a(href=@picture.website) = "by " + @picture.author
     p Drag to scroll, click to guess. Click anywhere to start.
+
+#victory.modal style="display: none;"
+  .box
+    h2 You found them all!
+    p 
+      | Artwork: 
+      a(href=@picture.website) = @picture.title + " by " + @picture.author
+    p
+      | Developed by 
+      a(href="https://brockmcelroy.com") Brock McElroy
+    p: a(href="https://github.com/brxck/odin-waldo") Source on GitHub

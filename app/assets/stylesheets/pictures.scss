@@ -60,12 +60,16 @@ h3 {
   }
 
   > p {
+    font-size: 14px;
     text-align: center;
     margin-top: 25%;
+    overflow: hidden;
+    height: 75%;
+    margin-bottom: 0;
   }
 }
 
-#modal {
+.modal {
   position: fixed;
   z-index: 2;
   width: 100%;
