@@ -25,13 +25,13 @@ people:
     lower: [1655, 1940]
   -
     name: Deadpool
-    upper: [870, 60]
-    lower: [810, 20]
+    upper: [815, 0]
+    lower: [865, 60]
   -
     name: Batman
     upper: [2025, 615]
     lower: [2115, 765]
   -
     name: The Box
-    upper: [140, 120]
-    lower: [175, 150]
+    upper: [180, 155]
+    lower: [230, 195]
