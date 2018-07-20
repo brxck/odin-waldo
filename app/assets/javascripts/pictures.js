@@ -60,6 +60,7 @@ const logPerson = response => {
   const label = document.createElement("div")
 
   label.className = "label"
+  label.style.opacity = 0
   label.style.left = response.person.x0 + "px"
   label.style.top = response.person.y0 + "px"
   label.style.width = response.person.x1 - response.person.x0 + "px"
@@ -68,7 +69,8 @@ const logPerson = response => {
   const text = document.createElement("p")
   text.textContent = response.person.name
   label.append(text)
-  setTimeout(() => container.append(label), 1050)
+  container.appendChild(label)
+  setTimeout(() => (label.style.opacity = 1), 500)
 
   const list = document.getElementById("names")
   const listEntry = document.getElementById(response.person.id)

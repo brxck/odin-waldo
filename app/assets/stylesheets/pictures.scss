@@ -51,9 +51,10 @@ h3 {
   position: absolute;
   border: solid 1px hsla(255, 255, 255, 0.5);
   color: hsla(0, 0, 0, 0);
+  transition-property: all;
+  transition-duration: 0.5s;
 
   &:hover {
-    border-style: none;
     background-color: hsla(0, 0, 0, 0.5);
     color: white;
   }
