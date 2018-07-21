@@ -12,4 +12,4 @@ A digital wimmelbook; find characters hidden within a larger image.
 
 - images at /assets/images/pictures/`image_name`.jpg
 - character details at /data/`image_name`.yml
-- `rails db:seed` on update
+- `rails db:reset` on update
