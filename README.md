@@ -1,24 +1,15 @@
-# README
+# OdinWaldo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A digital wimmelbook; find characters hidden within a larger image.
 
-Things you may want to cover:
+## Playing
 
-* Ruby version
+- Drag to scroll
+- Mousewheel to zoom
+- Click to find
 
-* System dependencies
+## Usage
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- images at /assets/images/pictures/`image_name`.jpg
+- character details at /data/`image_name`.yml
+- `rails db:seed` on update
